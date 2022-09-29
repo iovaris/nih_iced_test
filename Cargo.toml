@@ -1,0 +1,20 @@
+[package]
+name = "gain_gui_iced"
+version = "0.1.0"
+edition = "2021"
+authors = ["Robbert van der Helm <mail@robbertvanderhelm.nl>"]
+license = "ISC"
+
+description = "A simple gain plugin with an iced GUI"
+
+[workspace]
+members = ["xtask"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+nih_plug = { path = "../nih-plug", features = ["assert_process_allocs", "standalone"] }
+nih_plug_iced = { path = "../nih-plug/nih_plug_iced" }
+opener = "0.5.0"
+atomic_float = "0.1"
